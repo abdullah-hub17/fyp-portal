@@ -1,0 +1,74 @@
+.container-FB {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(#39b7ff, #42006c);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title-FB h1 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.form-FB {
+  display: flex;
+  margin: 10px auto;
+  flex-direction: column;
+}
+
+.form-FB label {
+  margin-bottom: 5px;
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.form-FB input,
+.form-FB textarea {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-FB textarea {
+  resize: vertical;
+}
+
+.message-FB {
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0.5, 0.5);
+}
+
+.message-FB h2 {
+  margin-bottom: 20px;
+}
+
+.message-FB p {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.tick-icon-FB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  animation: tick 0.5s ease-in-out forwards, blink 1.3s infinite;
+  color: rgb(25, 246, 0);
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}

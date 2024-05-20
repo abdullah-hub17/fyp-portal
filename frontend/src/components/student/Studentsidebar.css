@@ -1,0 +1,114 @@
+.student_container_sidebar {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+}
+
+main {
+  width: 100%;
+  background-image: url(./background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  background: linear-gradient(#39b7ff, #42006C);
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  transition: 0.7s;
+}
+
+.student_top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  margin-top: 10px;
+}
+
+.student_logo {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.student_bars {
+  font-size: 25px;
+  display: flex;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.student_bars:hover {
+  color: #000;
+  transition: all 0.5s;
+}
+
+.student_barsActive {
+  color: #000;
+}
+
+.student_link {
+  box-shadow: 5px 8px 10px rgba(0.1, 0.5, 0.5, 0.1);
+  display: flex;
+  color: #fff;
+  font-weight: 500;
+  padding: 15px 15px;
+  border-radius: 0px 12px 0px 12px;
+  margin: 5px 6px 7px 6px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+.student_link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.active {
+  background: lightskyblue;
+  color: #000;
+}
+
+.icon,
+-student_link_text {
+  font-size: 20px;
+  margin-left: -5px;
+}
+
+.student_logout_button {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student_logout_button:hover {
+  background-color: #c0392b;
+}
+
+.student_logout_button svg {
+  font-size: 25px;
+}
+
+.sidebar:not(:hover) .student_logout_button {
+  transform: translateX(-100%);
+}
+
+.sidebar:hover .student_logout_button {
+  transform: translateX(0);
+}

@@ -1,0 +1,72 @@
+.container-ET {
+    max-width: 400px;
+    margin: 120px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(#39b7ff, #42006c);
+    color: white;
+  }
+  
+  .form-ET {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label-ET {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .input-ET {
+    width: 60%;
+    padding: 4px 8px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .btn-primary-1 {
+    width: 80px;
+    height: 35px;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    background-color: rgb(0, 157, 255);
+    padding: 3px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .btn-primary-1:hover{
+    background-color: rgb(0, 129, 209);
+    transition: 0.5s ease;
+  }
+
+  .btn-primary-2 {
+    background-color: rgb(255, 68, 35);
+    padding: 3px 10px;
+    font-size: small;
+    border-radius: 5px;
+    color: white;
+    margin-left: 5px;
+  }
+  
+  .btn-primary-2:hover{
+    background-color: rgb(216, 46, 16);
+    transition: 0.5s ease;
+  }
+
+  .inner-ET{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 195, 255);
+    background: white;
+    color: black;
+  }

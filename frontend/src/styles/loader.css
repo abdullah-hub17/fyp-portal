@@ -1,0 +1,17 @@
+.loader__parent {
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+.loader__parent .loader__secondary {
+    height: inherit;
+    overflow: inherit;
+}
+
+.loader__parent .loader__secondary .loader__child {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,71 @@
+/* Container styling */
+.container-SE {
+  max-width: 600px;
+  max-height: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#39b7ff, #42006c);
+  font-family: "Arial", sans-serif;
+  overflow-y: auto;
+}
+
+/* Form styling */
+.form-SE {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.label-SE {
+  margin-bottom: 8px;
+  /* color: #ffffff; */
+  font-size: 14px;
+}
+
+/* Input styling */
+.input-SE {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Panel heading styling */
+.panel-SE {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* List styling */
+.ulist-SE {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* List item styling */
+.list-SE {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.new2 {
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.button{
+  display:inline;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  margin: 85px;
+}

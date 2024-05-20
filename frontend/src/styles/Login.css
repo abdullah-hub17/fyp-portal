@@ -1,0 +1,167 @@
+.main_div {
+  background-image: url(./login.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_1 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 500px;
+  background: white;
+  opacity: 90%;
+  padding-bottom: 5px;
+  border-radius: 15px;
+}
+
+.container_1 .auth .head {
+  font-weight: 500;
+}
+.form {
+  width: 65%;
+  margin-top: 1.5em;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.fyp-header-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  font-size: 3em;
+  width: 100%;
+  padding-top: 0.5em;
+  color: black;
+}
+
+.auth {
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  color: black;
+}
+
+.inputs-1 {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.input-1 {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 400px;
+  height: 70px;
+  background: #eaeaea;
+  border-radius: 10px;
+}
+
+.input-1 img {
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+.input-1 input {
+  height: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #797979;
+  font-size: 19px;
+  margin-top: 3px;
+}
+
+.submit-container-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.btn-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  background: linear-gradient(#39b7ff, #0391f0);
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+}
+
+/* button:hover {
+    background: #0077b3;
+    animation: buttonAnimation 1s;
+} */
+
+.signup-1 {
+  margin-top: 15px;
+  color: rgb(105, 105, 105);
+  font-weight: 600;
+  font-size: 0.8em;
+  padding-bottom: 1em;
+  display: flex;
+  column-gap: 0.3em;
+}
+
+.signup-1 span {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+span.animated-1 {
+  display: inline-block;
+  animation: colorChange 2s infinite;
+}
+
+/* For Button */
+/* @keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+} */
+
+/* For Span Element */
+@keyframes colorChange {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: green;
+  }
+
+  100% {
+    color: blue;
+  }
+}

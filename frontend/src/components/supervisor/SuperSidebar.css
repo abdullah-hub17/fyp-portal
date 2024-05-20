@@ -1,0 +1,112 @@
+.super_container_sidebar {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  /* padding: 3%; */
+  /* background: #dddddd; */
+  box-sizing: border-box;
+  /* margin: 5px; */
+}
+
+.super_sidebar {
+  background: linear-gradient(#39b7ff, #42006c);
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  transition: 0.7s;
+}
+
+.super_top_section {
+  display: flex;
+  align-items: center;
+  padding: 27px 15px;
+  margin-top: 10px;
+}
+
+.super_logo {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0px 0px;
+}
+
+.super_bars {
+  font-size: 25px;
+  display: flex;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.super_bars:hover {
+  color: #000;
+  transition: all 0.5s;
+}
+
+.super_barsActive {
+  color: #000;
+}
+
+.super_link {
+  box-shadow: 5px 8px 10px rgba(0.1, 0.5, 0.5, 0.1);
+  display: flex;
+  color: #fff;
+  font-size: 17.2px;
+  font-weight: 500;
+  padding: 15px 15px;
+  border-radius: 0px 12px 0px 12px;
+  margin: 5px 6px 7px 6px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+.super_link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.active {
+  background: lightskyblue;
+  color: #000;
+}
+
+.super_icon {
+  font-size: 22px;
+  margin-left: -5px;
+}
+
+.super_logout_button {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.super_logout_button:hover {
+  background-color: #c0392b;
+}
+
+.super_logout_button svg {
+  font-size: 25px;
+}
+
+.super_sidebar:not(:hover) .super_logout_button {
+  transform: translateX(-100%);
+}
+
+.super_sidebar:hover .super_logout_button {
+  transform: translateX(0);
+}

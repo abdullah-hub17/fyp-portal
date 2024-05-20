@@ -1,0 +1,45 @@
+.coordinator_supervisor_list_container {
+  background: linear-gradient(#39b7ff, #42006c) repeat no-repeat;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 1100px;
+  height: 95%;
+  margin: 70px;
+  margin-top: 20px;
+}
+
+.supervisor-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 5px;
+  height: 95vh;
+}
+
+.supervisor-container h4 {
+  font-size: 26px;
+  color: white;
+  padding-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.supervisor-container h1 {
+  font-size: 28px;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+ .supervisor-table {
+  color: white;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  margin-top: 0;
+  overflow-y: hidden;
+}

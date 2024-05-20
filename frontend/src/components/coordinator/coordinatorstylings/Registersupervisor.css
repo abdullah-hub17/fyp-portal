@@ -1,0 +1,71 @@
+.container-two {
+  font-family: "Arial", sans-serif;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 130px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(#56a4ff, #46006c);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  height: 100px;
+}
+
+.title-two {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.inner-two {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.input-two {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.form-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label-two {
+  color: #555;
+  font-size: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.btn {
+  background-color: #3498db;
+  color: white;
+  margin-top: 15px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}

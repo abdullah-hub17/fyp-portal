@@ -1,0 +1,73 @@
+/* Container styling */
+.container-CEQ {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#39b7ff, #42006c);
+  font-family: "Arial", sans-serif;
+  overflow-y: auto;
+}
+
+/* Title styling */
+.title-CEQ {
+  text-align: center;
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.form-CEQ {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inner container styling */
+.inner-CEQ {
+  margin-bottom: 16px;
+}
+
+/* Label styling */
+.label-CEQ {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  font-size: 23px;
+}
+
+/* Input styling */
+.input-CEQ {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* List title styling */
+.listTitle-CEQ {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* List styling */
+.ulist-CEQ {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* List item styling */
+.list-CEQ {
+  margin-top: 8px;
+  font-size: 14px;
+}

@@ -1,0 +1,60 @@
+/* Styles for the overall container */
+.super_notifications-container {
+  max-width: 800px;
+  max-height: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid rgb(0, 157, 255);
+  border-radius: 10px;
+}
+
+/* Styles for the notification header */
+.super_header_notification {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.super_header_notification h1 {
+  padding: 40px;
+  padding-bottom: 50px;
+  font-size: 50px;
+  text-decoration: underline;
+  font-weight: bold;
+  color: rgb(0, 157, 255);
+}
+
+/* Keyframes for displaying and hiding notifications */
+@keyframes displayNotification {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
+
+/* Styles for individual notifications */
+.super_notification {
+  background-color: rgb(0, 157, 255);
+  border: 1px solid #ddd;
+  color: white;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  animation: displayNotification 3s infinite;
+}
+
+.super_notification span {
+  font-size: 16px;
+  color: white;
+  font-size: 20px;
+}
+
+.super_notification:hover {
+  background-color: #e49999;
+}

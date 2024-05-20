@@ -1,0 +1,96 @@
+.container-four {
+  font-family: "Arial", sans-serif;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(#56a4ff, #46006c);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  height: 100px;
+}
+
+.inner-four {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow-y: auto;
+  max-height: 650px;
+}
+
+.title-four {
+  color: #fff;
+  text-align: center;
+}
+
+.form-four {
+  margin-top: 20px;
+}
+
+.label-four {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input-four {
+  width: auto;
+  border: 0.5px solid;
+  padding: 8px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-four:hover {
+    background-color: #f3f3f3;
+    transition: 0.5s ease;
+}
+
+.btn {
+  justify-items: center;
+}
+
+.newtitle-four {
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.unorder {
+  list-style: none;
+  padding: 0;
+}
+
+.list-four {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #b5b3b3;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-four button {
+  background-color: #f44336;
+  color: white;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.list-four button:hover {
+  background-color: #d32f2f;
+  transition: 0.7s ease;
+}

@@ -1,0 +1,73 @@
+
+.create-clo-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 40px 300px;
+  color: white;
+  background: linear-gradient(#56a4ff, #46006c);
+  border-radius: 10px;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.create-clo-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.question-list {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.question-item {
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.checkbox-label {
+  display: block;
+  cursor: pointer;
+}
+
+.create-clo-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-clo-button:hover {
+  background-color: #0056b3;
+}
+
+.created-clo-list {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.clo-item {
+  margin-bottom: 20px;
+}
+
+.remove-button {
+  display: inline;
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+}

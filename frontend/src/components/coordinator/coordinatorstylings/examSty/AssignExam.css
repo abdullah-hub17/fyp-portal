@@ -1,0 +1,16 @@
+.container-AE {
+    max-width: 400px;
+    margin: 120px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(#39b7ff, #42006c);
+    color: white;
+  }
+  
+  .h2-AE{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }

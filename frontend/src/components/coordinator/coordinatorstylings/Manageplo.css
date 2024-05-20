@@ -1,0 +1,156 @@
+.form-container-plo {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  font-family: "Arial", sans-serif;
+  margin-top: 80px;
+  border-radius: 10px;
+  background: linear-gradient(#56a4ff, #46006c);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  color: black;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.form-header-plo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-title-plo {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.form-description-plo {
+  font-size: 16px;
+  color: #e0e0e0;
+}
+
+.form-content-plo {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-plo {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.form-field-plo:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.field-label-edit-plo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.field-label-plo {
+  flex-grow: 1;
+}
+
+.field-label-text-plo {
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+}
+
+.edit-input-plo {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.field-type-select-plo select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.short-answer-input-plo,
+.paragraph-input-plo,
+.multichoice-select-plo,
+.multichoice-option-input-plo {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.multichoice-options-plo {
+  display: flex;
+  align-items: center;
+}
+
+.multichoice-option-input-plo {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.multichoice-add-button-plo {
+  display: flex;
+  font-size: small;
+  padding: 5px 7px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.multichoice-add-button-plo:hover {
+  background-color: #238d29;
+}
+
+.add-question-buttons-plo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plus-icon-plo {
+  width: 28px;
+  height: 28px;
+  color: #4caf50;
+  cursor: pointer;
+}
+
+.remove-question-button-plo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-question-button-plo button {
+  background-color: none;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-icon-plo {
+  width: 28px;
+  height: 28px;
+  color: #ff1a1a;
+  cursor: pointer;
+}

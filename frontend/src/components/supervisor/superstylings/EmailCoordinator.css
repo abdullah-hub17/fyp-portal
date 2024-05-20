@@ -1,0 +1,63 @@
+.container_EC {
+  font-family: "Arial", sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(#56a4ff, #46006c);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0.5, 0.5);
+}
+
+.inner_EC {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inner_EC div {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner_EC label {
+  font-weight: bold;
+  font-size: larger;
+  margin-bottom: 5px;
+}
+
+.inner_EC input,
+.inner_EC textarea,
+.inner_EC button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: black;
+}
+
+.inner_EC input:focus,
+.inner_EC textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.inner_EC button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inner_EC button:hover {
+  background-color: #0056b3;
+}
+
+.inner_EC textarea {
+  resize: vertical;
+}
+
+.inner_EC input[type="file"] {
+  padding: 3px;
+}

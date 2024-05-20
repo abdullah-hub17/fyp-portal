@@ -1,0 +1,27 @@
+- Minor Changes - By Abdullah
+
+------------------------------------------
+
+- Forgot Password Implemented and Reset Password left - By Abdullah
+
+------------------------------------------
+
+- Email and Password validation - By Abdullah
+
+------------------------------------------
+
+- Updated Sidebar UI - By Abdullah
+
+------------------------------------------
+
+- Minor Changes - By Dawood
+
+------------------------------------------
+
+- Feedback Pages ready - By Abdullah
+
+------------------------------------------
+
+- All pages Designed - By Abdullah
+- Assign Exam page is not fully designed
+  because it's not functional yet
