@@ -1,74 +1,80 @@
-import { Button, FormControl, Input, Stack } from '@chakra-ui/react';
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { forgotPassword, clearErrors, clearMessages } from '../redux/actions/studentAction';
-import toast from 'react-hot-toast';
+// IMPORTS -
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Button, FormControl, Input, Stack } from "@chakra-ui/react";
+import { clearErrors, resetPassword } from "../redux/actions/studentAction";
+import toast from "react-hot-toast";
 
 const ResetPassword = () => {
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const { token } = useParams();
 
-    const history = useNavigate();
-    const dispatch = useDispatch();
-    const {message, error} = useSelector((state) => state.FORGOT_PASSWORD);
+  console.log(token)
 
+  const dispatch = useDispatch();
+  const { error, success } = useSelector((state) => state.FORGOT_PASSWORD);
+  const history = useNavigate();
 
+  const resetSubmitHandler = (e) => {
+    e.preventDefault();
 
-    const [email, setEmail] = useState("");
+    dispatch(resetPassword(token, password, confirmPassword));
+  };
 
-    const forgotPasswordSubmit = (e) => {
-        e.preventDefault();
-        const myForm = new FormData();
-        myForm.set("email", email);
-        dispatch(forgotPassword(myForm));
-      };
-    
-      // ALERT
-      React.useEffect(() => {
-      
-           if (error) {
-            toast.error(error);
-          dispatch(clearErrors());
-        }
-    
-        if (message) {
-            toast.success(message); 
-            dispatch(clearMessages());
-             }  
-      }, [dispatch, error, message, toast]);
-    
+  useEffect(() => {
+    if (success) {
+      toast.success("Your password has been reset successfully");
+      history("/");
+    }
 
-    return (
-        <>
-              <div className="main_div">
-              <div className="container_1">
-                     <div className="auth">    
-                      <form className="form login__form" onSubmit={forgotPasswordSubmit}>
-                        <FormControl>
-                          <Input
-                            type="email"
-                            placeholder="Email"
-                            onChange={(e) => {setEmail(e.target.value)}}
-                            value={email}
-                            required
-                          />
-                        </FormControl>
-    
-                        <Stack spacing={4} direction="row" flex justifyContent={"space-between"}>
-                          <Button colorScheme="blue" size="sm" type="submit">
-                            Submit
-                          </Button>
-    
-                          <Button variant={"ghost"} size="sm" type="button" onClick={() => history("/")}>
-                            Back
-                          </Button>
-                        </Stack>
-                      </form>
-                        </div>
-                    </div>
-                    </div>
-                  </>
-               
-     );
-}
+    if (error) {
+      toast.error(error);
+      dispatch(clearErrors());
+    }
+  }, [dispatch, error, success, history]);
+
+  return (
+    <div className="main_div">
+      <div className="container_1">
+        <div className="auth">
+          <form className="form login__form" onSubmit={resetSubmitHandler}>
+            <FormControl>
+              <Input
+                type="password"
+                placeholder="New Password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                required
+              />
+            </FormControl>
+
+            <FormControl>
+              <Input
+                type="password"
+                placeholder="Confirm Password"
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                value={confirmPassword}
+                required
+              />
+            </FormControl>
+
+            <Stack
+              spacing={4}
+              direction="row"
+              flex
+              justifyContent={"space-between"}
+            >
+              <Button colorScheme="blue" size="sm" type="submit">
+                Submit
+              </Button>
+            </Stack>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default ResetPassword;

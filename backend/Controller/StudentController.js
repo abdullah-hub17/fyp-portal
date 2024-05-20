@@ -5,6 +5,7 @@ const asyncErr = require("../Middleware/asyncErr");
 const ErrorHandler = require("../utils/errorHandler");
 const setToken = require("../utils/jsonWebToken");
 const sendEmail = require("../utils/sendEmail");
+const crypto = require("crypto");
 
 // REGISTER STUDENT
 exports.registerStudent = asyncErr(async (req, res, next) => {
@@ -120,9 +121,9 @@ exports.forgotPassword = asyncErr(async (req, res, next) => {
   }
 });
 
+// RESET PASSWORD FOR STUDENT -
 exports.resetPassword = asyncErr(async (req, res, next) => {
   const token = req.params.token;
-
   resetPasswordToken = crypto.createHash("sha256").update(token).digest("hex");
 
   const student = await studentModel.findOne({

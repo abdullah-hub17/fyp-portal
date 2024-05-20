@@ -1,31 +1,33 @@
 // PARTIALS -
-const server = "https://fyp-portal-eight.vercel.app/fyp";
+// const server = "https://fyp-portal-eight.vercel.app/fyp";
+const customServer = `http://localhost:8000/fyp`;
 
 // COMMON -
-export const FORGOT_PASSWORD = `${server}/password/forgot`
+export const FORGOT_PASSWORD = `${customServer}/password/forgot`
+export const RESET_PASSWORD = `${customServer}/password/reset`
 
 // USER -
-export const REGISTER_USER = `${server}/registerStudent`;
-export const LOGIN = `${server}/loginStudent`;
-export const COORDINATOR_LOGIN = `${server}/loginCordinator`;
-export const SUPERVISOR_LOGIN = `${server}/loginSupervisor`;
-export const LOGOUT = `${server}/logoutStudent`;
-export const LOAD_USER = `${server}/student/me`;
-export const COORDINATOR_ME = `${server}/cordinator/me`;
-export const SUPERVISOR_ME = `${server}/supervisor/me`;
+export const REGISTER_USER = `${customServer}/registerStudent`;
+export const LOGIN = `${customServer}/loginStudent`;
+export const COORDINATOR_LOGIN = `${customServer}/loginCordinator`;
+export const SUPERVISOR_LOGIN = `${customServer}/loginSupervisor`;
+export const LOGOUT = `${customServer}/logoutStudent`;
+export const LOAD_USER = `${customServer}/student/me`;
+export const COORDINATOR_ME = `${customServer}/cordinator/me`;
+export const SUPERVISOR_ME = `${customServer}/supervisor/me`;
 
 // STUDENT -
-export const REGISTER_STUDENT_FYP = `${server}/registration`;
-export const STUDENT_FYP_1 = `${server}/fyp1`;
-export const STUDENT_FYP_2 = `${server}/fyp2`;
-export const STUDENT_FYP_3 = `${server}/fyp3`;
-export  const STUDENT_SUPERVISORS = `${server}/supervisor/all`
+export const REGISTER_STUDENT_FYP = `${customServer}/registration`;
+export const STUDENT_FYP_1 = `${customServer}/fyp1`;
+export const STUDENT_FYP_2 = `${customServer}/fyp2`;
+export const STUDENT_FYP_3 = `${customServer}/fyp3`;
+export  const STUDENT_SUPERVISORS = `${customServer}/supervisor/all`
 
 // COORDINATOR -
-export const COORDINATOR_CREATE_ANNOUNCEMENT = `${server}/createAnnouncement`;
-export const COORDINATOR_REGISTER_SUPERVISOR = `${server}/registerSupervisor`;
-export const COORDINATOR_STUDENTS_FYP = `${server}/cordinator/fyp`; // All students fyp
+export const COORDINATOR_CREATE_ANNOUNCEMENT = `${customServer}/createAnnouncement`;
+export const COORDINATOR_REGISTER_SUPERVISOR = `${customServer}/registerSupervisor`;
+export const COORDINATOR_STUDENTS_FYP = `${customServer}/cordinator/fyp`; // All students fyp
 
 // SUPERVISOR -
-export const SUPERVISOR_REQUESTS = `${server}/supervisor/fyps`;
+export const SUPERVISOR_REQUESTS = `${customServer}/supervisor/fyps`;
 

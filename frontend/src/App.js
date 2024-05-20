@@ -49,14 +49,12 @@ import SuperDashboard from "../src/components/supervisor/home/SuperDashboard";
 import EmailCoordinator from "./components/supervisor/home/EmailCoordinator";
 import FypRequests from "./components/supervisor/home/FypRequests";
 import SupervisorFeedback from "./components/supervisor/home/SupervisorFeedback.jsx";
-import { useState } from "react";
+import ForgotPassword from "./register/ForgotPassword.js";
 import ResetPassword from "./register/ResetPassword.js";
 
 function App() {
   const { isAuth, user } = useSelector((state) => state.AUTH);
   const dispatch = useDispatch();
-  //const Navigate = useNavigate();
-  const [examType, setExamType] = useState('');
 
   React.useEffect(() => {
     dispatch(loadUser());
@@ -129,11 +127,7 @@ function App() {
                     {/*CLO PAGES */}
                     <Route path="/CLOs" element={<CLOs />} />
                     <Route path="/CLOs/CreateClo" element={<CreateClo />} />
-                    {/* <Route path="/CLOs/ManageClo" element={<ManageClo />} /> */}
-                    {/* CLO PAGES */}
-
-                    {/* {/* <Route path="/Manageclo" element={<Manageclo />} />
-                    <Route path="/Manageplo" element={<Manageplo />} /> */}
+                   
                     <Route
                       path="/registerSupervisor"
                       element={<Registersupervisor />}
@@ -175,7 +169,8 @@ function App() {
 
           {/* Default route for login */}
           <Route path="/" element={<Login />} index/>
-          <Route path="/password/forgot" element={<ResetPassword />} />
+          <Route path="/password/forgot" element={<ForgotPassword />} />
+          <Route path="/password/reset/:token" element={<ResetPassword />}/>
         </Routes>
       </div>
     </>
