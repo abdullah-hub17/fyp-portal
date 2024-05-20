@@ -1,5 +1,5 @@
 // PARTIALS -
-const server = "http://localhost:8000/fyp";
+const server = "https://fyp-portal-eight.vercel.app/fyp";
 
 // COMMON -
 export const FORGOT_PASSWORD = `${server}/password/forgot`
