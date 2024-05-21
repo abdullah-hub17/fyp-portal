@@ -92,7 +92,7 @@ const CoordinatorSidebar = ({ children }) => {
     },
     {
       path: "/registerSupervisor",
-      name: "Requests",
+      name: "Reg Supervisor",
       icon: <FiUserPlus />,
     },
     {

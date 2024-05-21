@@ -19,7 +19,10 @@ import {
   STUDENT_SUPERVISORS_FAIL,
   FORGOT_PASSWORD_REQUEST,
   FORGOT_PASSWORD_SUCCESS,
-  FORGOT_PASSWORD_FAIL
+  FORGOT_PASSWORD_FAIL,
+  RESET_PASSWORD_REQUEST,
+  RESET_PASSWORD_SUCCESS,
+  RESET_PASSWORD_FAIL,
 } from "../../utils/constants";
 import {
   REGISTER_STUDENT_FYP,
@@ -27,7 +30,8 @@ import {
   STUDENT_FYP_2,
   STUDENT_FYP_3,
   STUDENT_SUPERVISORS,
-  FORGOT_PASSWORD
+  FORGOT_PASSWORD,
+  RESET_PASSWORD,
 } from "../../utils/paths";
 
 // STUDENT FYP REGISTRATION -
@@ -94,7 +98,6 @@ export const Register_Student_FYP =
 
       dispatch({ type: REGISTER_STUDENT_FYP_SUCCESS, payload: data });
     } catch (err) {
-      
       dispatch({
         type: REGISTER_STUDENT_FYP_FAIL,
         payload: err?.response?.data?.message,
@@ -103,51 +106,39 @@ export const Register_Student_FYP =
   };
 
 // STUDENT FYP 1 -
-export const Student_FYP_1 =
-  ( file ) =>
-  async (dispatch) => {
-    console.log(file);
-    try {
-      dispatch({
-        type: STUDENT_FYP_1_REQUEST,
-      });
+export const Student_FYP_1 = (file) => async (dispatch) => {
+  console.log(file);
+  try {
+    dispatch({
+      type: STUDENT_FYP_1_REQUEST,
+    });
 
-      const config = {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      };
+    const config = {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    };
 
-      const { data } = await axios.post(
-        STUDENT_FYP_1,
-        {
-          
-          file,
-        },
-        config
-      );
-      console.log(data);
+    const { data } = await axios.post(
+      STUDENT_FYP_1,
+      {
+        file,
+      },
+      config
+    );
+    console.log(data);
 
-      dispatch({ type: STUDENT_FYP_1_SUCCESS, payload: data });
-    } catch (err) {
-     
-      dispatch({
-        type: STUDENT_FYP_1_FAIL,
-        payload: err?.response?.data?.message,
-      });
-    }
-  };
+    dispatch({ type: STUDENT_FYP_1_SUCCESS, payload: data });
+  } catch (err) {
+    dispatch({
+      type: STUDENT_FYP_1_FAIL,
+      payload: err?.response?.data?.message,
+    });
+  }
+};
 
-
-
-
-
-
-  
 // STUDENT FYP 2 -
-export const Student_FYP_2 =
-( file ) =>
-async (dispatch) => {
+export const Student_FYP_2 = (file) => async (dispatch) => {
   console.log(file);
   try {
     dispatch({
@@ -163,7 +154,6 @@ async (dispatch) => {
     const { data } = await axios.post(
       STUDENT_FYP_2,
       {
-        
         file,
       },
       config
@@ -179,15 +169,8 @@ async (dispatch) => {
   }
 };
 
-
-
-
-
-
 // STUDENT FYP 3 -
-export const Student_FYP_3 =
-( file ) =>
-async (dispatch) => {
+export const Student_FYP_3 = (file) => async (dispatch) => {
   console.log(file);
   try {
     dispatch({
@@ -203,7 +186,6 @@ async (dispatch) => {
     const { data } = await axios.post(
       STUDENT_FYP_3,
       {
-        
         file,
       },
       config
@@ -219,16 +201,65 @@ async (dispatch) => {
   }
 };
 
-
-
 // SUPERVSIOR NAMES ON STUDENTS SUPERVISORS LIST IN  FYP REGISTRATON -
-export const STUDENT_CURRENT_SUPERVISORS =
-  ( file ) =>
-  async (dispatch) => {
-    console.log(file);
+export const STUDENT_CURRENT_SUPERVISORS = (file) => async (dispatch) => {
+  console.log(file);
+  try {
+    dispatch({
+      type: STUDENT_SUPERVISORS_REQUEST,
+    });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const { data } = await axios.get(STUDENT_SUPERVISORS, config);
+    console.log(data);
+
+    dispatch({ type: STUDENT_SUPERVISORS_SUCCESS, payload: data });
+  } catch (err) {
+   dispatch({
+      type: STUDENT_SUPERVISORS_FAIL,
+      payload: err?.response?.data?.message,
+    });
+  }
+};
+
+// FORGOT PASSWORD -
+export const forgotPassword = (email) => async (dispatch) => {
+  try {
+    dispatch({
+      type: FORGOT_PASSWORD_REQUEST,
+    });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const { data } = await axios.post(FORGOT_PASSWORD, email, config);
+
+    dispatch({
+      type: FORGOT_PASSWORD_SUCCESS,
+      payload: data.message,
+    });
+  } catch (err) {
+    dispatch({
+      type: FORGOT_PASSWORD_FAIL,
+      payload: err.response.data.message,
+    });
+  }
+};
+
+// RESET PASSWORD -
+export const resetPassword =
+  (token, password, confirmPassword) => async (dispatch) => {
     try {
       dispatch({
-        type: STUDENT_SUPERVISORS_REQUEST,
+        type: RESET_PASSWORD_REQUEST,
       });
 
       const config = {
@@ -237,56 +268,24 @@ export const STUDENT_CURRENT_SUPERVISORS =
         },
       };
 
-      const { data } = await axios.get(STUDENT_SUPERVISORS
-        ,
-        
+      const { data } = await axios.put(
+        `${RESET_PASSWORD}/${token}`,
+        { password, confirmPassword },
         config
       );
-      console.log(data);
 
-      dispatch({ type: STUDENT_SUPERVISORS_SUCCESS, payload: data });
-    } catch (err) {
-      // console.log(err.response.data.message)
       dispatch({
-        type: STUDENT_SUPERVISORS_FAIL,
-        payload: err?.response?.data?.message,
+        type: RESET_PASSWORD_SUCCESS,
+        payload: data.success,
+      });
+    } catch (err) {
+      dispatch({
+        type: RESET_PASSWORD_FAIL,
+        payload: err.response.data.message,
       });
     }
   };
 
-  export const forgotPassword = (email) => async (dispatch) => {
-
-    try{
-    
-      dispatch({
-        type: FORGOT_PASSWORD_REQUEST,
-      });
-    
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        }
-      }
-    
-      const {data} = await axios.post(FORGOT_PASSWORD, email, config)
-    
-      dispatch({
-        type: FORGOT_PASSWORD_SUCCESS,
-        payload: data.message,
-      });
-    
-    }
-    catch(err){
-      dispatch({
-        type: FORGOT_PASSWORD_FAIL,
-        payload: err.response.data.message,
-      });
-    }
-    
-    
-    }
-
-  
 // CLEAR ERRORS -
 export const clearErrors = () => async (dispatch) => {
   dispatch({

@@ -81,7 +81,7 @@ export const studentReducer = createReducer(initialState, {
     state.error = action.payload;
   },
 
-    // CLEAR ERRORS -
+  // CLEAR ERRORS -
   CLEAR_ERRORS: (state) => {
     state.error = null;
   },
@@ -92,41 +92,42 @@ export const studentReducer = createReducer(initialState, {
 });
 
 export const forgotPassword = createReducer(initialState, {
-
   FORGOT_PASSWORD_REQUEST: (state, action) => {
     state.loading = true;
-state.error = null;
+    state.error = null;
   },
-  
+
   FORGOT_PASSWORD_SUCCESS: (state, action) => {
     state.loading = true;
-    state.message = action.payload
+    state.message = action.payload;
   },
-  
-  FORGOT_PASSWORD_FAIL: (state, action) =>{
+
+  FORGOT_PASSWORD_FAIL: (state, action) => {
     state.loading = false;
     state.error = action.payload;
   },
-  
-  // RESET PASSWORD
-  
-  // RESET_PASSWORD_REQUEST: (state, action) => {
-  //   state.loading = true;
-  //   state.error = null;
-  // }, 
-  
-  // RESET_PASSWORD_SUCCESS: (state, action) => {
-  // state.loading = false;
-  // state.success = action.payload;
-  // },
-  
-  // RESET_PASSWORD_FAIL: (state, action) => {
-  //   state.loading = false;
-  //   state.error = action.payload;
-  // },
-  
+
+  // RESET PASSWORD -
+  RESET_PASSWORD_REQUEST: (state, action) => {
+    state.loading = true;
+    state.error = null;
+  },
+
+  RESET_PASSWORD_SUCCESS: (state, action) => {
+    state.loading = false;
+    state.success = action.payload;
+  },
+
+  RESET_PASSWORD_FAIL: (state, action) => {
+    state.loading = false;
+    state.error = action.payload;
+  },
+
   CLEAR_ERRORS: (state, action) => {
-      state.error = null;
-    },
-  
-  })
+    state.error = null;
+  },
+
+  CLEAR_MESSAGES: (state) => {
+    state.message = null;
+  },
+});

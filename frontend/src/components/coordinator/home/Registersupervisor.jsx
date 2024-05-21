@@ -33,6 +33,20 @@ const Registersupervisor = () => {
   const submit_handeler = (e) => {
     e.preventDefault();
     var form = new FormData();
+
+    if (!email.includes("@")) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!password.match(passwordRegex)) {
+      toast.error(
+        "Password must contain at least 8 characters including 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character."
+      );
+      return;
+    }
   
     form.append("name", name);
     form.append("email", email);

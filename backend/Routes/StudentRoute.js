@@ -14,7 +14,7 @@ router.post("/registerStudent", registerStudent);
 router.route("/loginStudent").post(loginStudent)
 router.get("/logoutStudent",logoutStudent);
 router.route('/password/forgot').post(forgotPassword);
-router.route('/password/reset:token').put(resetPassword);
+router.route('/password/reset/:token').put(resetPassword);
 router.get("/student/me",authenticate, getStudentDetails);
 
 router.post("/registration",FYPRegistrationUpload.single("file") ,RegisterStudentFYP);
