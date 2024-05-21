@@ -11,7 +11,7 @@ const ResetPassword = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const { token } = useParams();
 
-  console.log(token)
+  console.log(token);
 
   const dispatch = useDispatch();
   const { error, success } = useSelector((state) => state.FORGOT_PASSWORD);
@@ -19,6 +19,15 @@ const ResetPassword = () => {
 
   const resetSubmitHandler = (e) => {
     e.preventDefault();
+
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!password.match(passwordRegex)) {
+      toast.error(
+        "Password must contain at least 8 characters including 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character."
+      );
+      return;
+    }
 
     dispatch(resetPassword(token, password, confirmPassword));
   };
